@@ -4,6 +4,8 @@ import {
   FiveHero,
   FourHero,
   HeroPart,
+  PartnerSponsor,
+  PrizeAward,
   SecondHero,
   ThirdHero,
 } from "../components/mainPage/index.jsx";
@@ -16,6 +18,8 @@ const MainPage = () => {
       <ThirdHero />
       <FourHero />
       <FiveHero />
+      <PrizeAward />
+      <PartnerSponsor />
     </>
   );
 };

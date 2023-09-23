@@ -3,5 +3,15 @@ import SecondHero from "./SecondHero";
 import ThirdHero from "./ThirdHero";
 import FourHero from "./FourHero";
 import FiveHero from "./FiveHero";
+import PartnerSponsor from "./PartnerSponsor";
+import PrizeAward from "./PrizeAward";
 
-export { HeroPart, SecondHero, ThirdHero, FourHero, FiveHero };
+export {
+  PrizeAward,
+  HeroPart,
+  SecondHero,
+  ThirdHero,
+  FourHero,
+  FiveHero,
+  PartnerSponsor,
+};
