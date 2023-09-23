@@ -9,7 +9,7 @@ const DownwardArrowIcon = () => {
       viewBox="0 0 13 9"
       fill="none"
     >
-      <path d="M1 1L6.5 7L11.5 1" stroke="white" stroke-width="2" />
+      <path d="M1 1L6.5 7L11.5 1" stroke="white" strokeWidth="2" />
     </svg>
   );
 };

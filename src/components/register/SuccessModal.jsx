@@ -4,7 +4,7 @@ import registerSuccess from "../../assets/registerSuccess.svg";
 import eyeFace from "../../assets/eyeFAce.svg";
 
 export const SuccessModal = (props) => {
-  const { modal, setModal, title, desc } = props;
+  const { modal, setModal } = props;
 
   return (
     <>
@@ -25,13 +25,10 @@ export const SuccessModal = (props) => {
                   <img src={eyeFace} alt="eye-face" />
                 </h6>
               </span>
-              {/* 
-              <span className="register-success-close"> */}
 
               <button onClick={setModal} className="register-close-btn">
                 back
               </button>
-              {/* </span> */}
             </div>
           </div>
         </div>
