@@ -1,9 +1,8 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
-import MainPage from "./pages/main-page";
-import RegisterPage from "./pages/Register-page";
-import ContactPage from "./pages/contact-page";
+import { MainPage, RegisterPage, ContactPage } from "./pages/index";
+
 import NavBar from "./components/header/NavBar";
 
 function App() {

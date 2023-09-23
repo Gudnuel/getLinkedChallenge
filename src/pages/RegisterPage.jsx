@@ -52,15 +52,7 @@ const RegisterPage = () => {
     setPrivacy("");
     setTeamName("");
   };
-  // if (selected === "MOBILE") {
-  //   setCategory(1);
-  // }
-  // if (selected === "DEV") {
-  //   setCategory(2);
-  // } else {
-  //   setCategory(3);
-  // }
-  // console.log(category);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -83,7 +75,6 @@ const RegisterPage = () => {
       console.log(report);
       setIsLoading(false);
       setModal(true);
-      // console.log(report);
       reset();
     } else {
       setIsLoading(false);
