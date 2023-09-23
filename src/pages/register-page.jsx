@@ -22,8 +22,8 @@ const RegisterPage = () => {
   const [modal, setModal] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleModal = (e) => {
-    setCategory(e.target.value);
+  const handleModal = () => {
+    setModal(!modal);
   };
   const handleGroupSize = (e) => {
     setGroupSize(e.target.value);
