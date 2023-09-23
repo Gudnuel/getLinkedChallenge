@@ -3,7 +3,7 @@ import "./styles/success-modal.scss";
 import registerSuccess from "../../assets/registerSuccess.svg";
 import eyeFace from "../../assets/eyeFAce.svg";
 
-export const SuccessModal = (props) => {
+const SuccessModal = (props) => {
   const { modal, setModal } = props;
 
   return (
@@ -36,3 +36,5 @@ export const SuccessModal = (props) => {
     </>
   );
 };
+
+export default SuccessModal;
