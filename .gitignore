@@ -23,6 +23,7 @@ test/
 # Temporary files.
 .DS_Store
 .env.local
+.gitignore
 
 # Yarn Integrity file
 .yarn-integrity
