@@ -18,6 +18,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/contact" element={<ContactPage />} />
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </>

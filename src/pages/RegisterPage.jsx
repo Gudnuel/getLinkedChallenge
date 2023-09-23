@@ -20,37 +20,39 @@ const RegisterPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Select your category");
   const [modal, setModal] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
 
   const handleModal = () => {
     setModal(!modal);
   };
+
   const handleGroupSize = (e) => {
     setGroupSize(e.target.value);
   };
-  const handlePrivacy = () => {
-    setPrivacy(!privacy);
+
+  const handlePrivacy = (e) => {
+    setPrivacy(e.target.checked);
   };
+
   const toggler = () => {
     setIsOpen(!isOpen);
-    if (selected === "MOBILE") {
-      setCategory(1);
-    }
-    if (selected === "DEV") {
-      setCategory(2);
-    }
-    if (selected === "UI/UX") {
-      setCategory(3);
-    }
   };
+
+  const resultChanger = (value) => {
+    setCategory(value);
+    setIsOpen(false);
+    console.log(category, selected);
+  };
+
   const reset = () => {
     setCategory("");
     setEmail("");
     setGroupSize("");
     setPhone("");
     setProjectTopic("");
-    setPrivacy("");
+    setPrivacy(false);
     setTeamName("");
+    setSelected("Select your category");
   };
 
   const handleSubmit = async (e) => {
@@ -66,23 +68,26 @@ const RegisterPage = () => {
       category: category,
     };
     console.log(data);
-    const response = await axios.post(
-      `${baseUrl}/hackathon/registration`,
-      data
-    );
-    const report = response.data;
-    if (report) {
-      console.log(report);
-      setIsLoading(false);
-      setModal(true);
-      reset();
-    } else {
-      setIsLoading(false);
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 5000);
-    }
+    await axios
+      .post(`${baseUrl}/hackathon/registration`, data)
+
+      .then(function (response) {
+        console.log(response);
+        setIsLoading(false);
+        setModal(true);
+        reset();
+      })
+      .catch(function (error) {
+        console.log(error);
+        setIsLoading(false);
+        reset();
+        if (error.message) {
+          setError(error.message);
+        }
+        setTimeout(() => {
+          setError("");
+        }, 5000);
+      });
   };
 
   return (
@@ -168,7 +173,7 @@ const RegisterPage = () => {
                           key={option.id}
                           onClick={() => {
                             setSelected(option.name);
-                            setIsOpen(false);
+                            resultChanger(option.value);
                           }}
                           className="general-dropdown-item"
                         >
@@ -196,10 +201,9 @@ const RegisterPage = () => {
               </span>
             </section>
             <span className="bottom-register-option">
-              {!error && (
-                <p>Please review your registration details before submitting</p>
-              )}
-              {error && (
+              {error ? (
+                <p>{error}</p>
+              ) : (
                 <p>Please review your registration details before submitting</p>
               )}
 
@@ -207,7 +211,7 @@ const RegisterPage = () => {
                 <input
                   type="checkbox"
                   required
-                  value={privacy}
+                  checked={privacy}
                   onChange={handlePrivacy}
                 />
                 I agreed with the event terms and conditions and privacy policy

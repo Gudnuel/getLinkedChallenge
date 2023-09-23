@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./beautifier/contact-page.scss";
+import axios from "axios";
+import { baseUrl } from "../Data/baseUrl";
+
 import {
   InstagramIcon,
   TwitterIcon,
@@ -10,9 +13,52 @@ import { InputComponent } from "../components/register/index.jsx";
 
 const ContactPage = () => {
   const [teamName, setTeamName] = useState("");
-  const [topic, setTopic] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const reset = () => {
+    setTeamName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const data = {
+      email: email,
+      first_name: teamName,
+      phone_number: phone,
+      message: message,
+    };
+    console.log(data);
+    await axios
+      .post(`${baseUrl}/hackathon/contact-form`, data)
+
+      .then(function (response) {
+        console.log(response);
+        setIsLoading(false);
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 5000);
+        reset();
+      })
+      .catch(function (error) {
+        console.log(error);
+        setIsLoading(false);
+        reset();
+        setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 5000);
+      });
+  };
 
   return (
     <div className="contact-main">
@@ -46,28 +92,32 @@ const ContactPage = () => {
           <span className="contact-topic-control">
             <h4>Questions or need assistance? Let us know about it!</h4>
             <h5>Email us below to any question related to our event</h5>
+            {success ? (
+              <h2 style={{ color: "greenyellow" }}>MESSAGE SENT!</h2>
+            ) : null}
           </span>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <InputComponent
               type="text"
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
-              // title="Team's Name"
-              placeholder="Team's Name"
+              required
+              placeholder="Full Name"
             />
             <InputComponent
-              type="text"
-              value={topic}
-              onChange={(e) => setTeamName(e.target.value)}
-              // title="Team's Name"
-              placeholder="Topic"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              pattern="[0-9]{11} || 0-9]{13} "
+              required
+              placeholder="Phone Number"
             />
             <InputComponent
-              type="text"
+              type="email"
               value={email}
-              onChange={(e) => setTeamName(e.target.value)}
-              // title="Team's Name"
+              onChange={(e) => setEmail(e.target.value)}
+              required
               placeholder="Email"
             />
             <section className="text-component">
@@ -75,6 +125,7 @@ const ContactPage = () => {
                 <textarea
                   className="text-field"
                   type="text"
+                  value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   cols="30"
@@ -85,7 +136,14 @@ const ContactPage = () => {
                 ></textarea>
               </div>
             </section>
-            <button className="contact-submit-btn">Submit</button>
+
+            {!isLoading && (
+              <button className="contact-submit-btn">Submit</button>
+            )}
+            {isLoading && (
+              <button className="contact-submit-btn">SENDING...</button>
+            )}
+            {error ? <h6 style={{ color: "red" }}>Try Again</h6> : null}
           </form>
 
           <span className="social-connect mobile">
