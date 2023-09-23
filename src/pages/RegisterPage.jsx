@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./beautifier/register-page.scss";
 import registerGuySeat from "../assets/registerGuySeatImg.svg";
 import movementImg from "../assets/movementImg.svg";
-import { baseUrl } from "../Confij";
+import { baseUrl } from "../Data/baseUrl";
 import { DownwardArrowIcon } from "../components/icon/index.jsx";
 import { option } from "../Data/option";
 import { SuccessModal } from "../components/register/index";
