@@ -1,0 +1,11 @@
+*,
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  /* background-color: rgb(36, 36, 56); */
+  /* border: 0px !important; */
+}
+
+@media (max-width: 768px) {
+}

@@ -1,0 +1,297 @@
+$primaryColor: linear-gradient(
+  270deg,
+  #903aff 0%,
+  #d434fe 56.42%,
+  #ff26b9 99.99%,
+  #fe34b9 100%
+);
+$darkColor: #150e28;
+$femaleColor: #903aff;
+$ladyColor: #d434fe;
+
+.main-holder {
+  height: 45rem;
+  width: -webkit-fill-available;
+  padding: 8rem 3rem 0 5rem;
+  background-image: url(../../../assets/bgBoyMainDesk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.hero-first {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: right;
+  height: auto;
+  display: flex;
+
+  h4 {
+    display: flex;
+    flex-direction: row;
+    width: 639px;
+    // width: 40rem;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: auto;
+    .igniting-fix {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .bottom-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+.company-name {
+  text-align: left;
+  margin-top: 4rem;
+  h1 {
+    color: #fff;
+    font-family: Clash Display;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    .version-point {
+      color: $ladyColor;
+    }
+    .vertical-fix {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      margin-bottom: -94px;
+      .company-top-word {
+        display: flex;
+        flex-direction: row;
+        .creative-icon {
+          display: flex;
+          width: 4rem;
+          height: 5.7rem;
+          align-items: baseline;
+          flex-direction: column-reverse;
+          .creative {
+            margin-bottom: -24px;
+          }
+        }
+      }
+    }
+  }
+}
+p {
+  // width: 500px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 33.2px */
+}
+
+.company-btn {
+  margin-top: 2rem;
+  button {
+    background: linear-gradient(
+      270deg,
+      #903aff 0%,
+      #d434fe 56.42%,
+      #ff26b9 99.99%,
+      #fe34b9 100%
+    );
+    border-radius: 4px;
+    padding: 1rem 4.5rem;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+  }
+}
+
+h3 {
+  margin-top: 3rem;
+  color: #fff;
+  font-family: Unica One;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+
+  small {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133%;
+  }
+}
+
+@media (max-width: 960px) {
+  .company-name {
+    // text-align: left;
+    margin-top: 1rem;
+    .company-top-word {
+      h1 {
+        color: #fff;
+        font-family: Clash Display;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        .creative-icon {
+          display: flex;
+          width: 4rem;
+          height: 4.7rem;
+          align-items: baseline;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    .igniting-fix {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .bottom-bar {
+      width: 40%;
+      svg {
+        width: 95%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 763px) {
+//   .hero-first {
+//     h4 {
+//       font-size: 30px;
+//       margin-left: 0%;
+//     }
+//     .company-name {
+//       .company-word {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+//         h1 {
+//           font-size: 3.5rem;
+//           width: 100%;
+//           span {
+//             img {
+//               width: 12%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 650px) {
+  .main-holder {
+    height: 50rem;
+    padding: 8rem 2rem 0 2rem;
+    background-image: url(../../../assets/bgBoyImageMobile.png);
+  }
+  .hero-first {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+
+    h4 {
+      text-align: center;
+      width: 100%;
+      font-size: 1rem;
+      margin-left: 0%;
+
+      .igniting-fix {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+      }
+      .bottom-bar {
+        width: 32%;
+        svg {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  .company-word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 2.8rem;
+      width: 100%;
+      .vertical-fix {
+        height: 9rem;
+        width: 100%;
+        .company-top-word {
+          justify-content: center;
+          width: 100%;
+          .creative-icon {
+            width: 10%;
+            height: 3.3rem;
+            .creative {
+              width: 100%;
+              margin-bottom: -8px;
+            }
+          }
+        }
+      }
+      span {
+        img {
+          width: 12%;
+        }
+      }
+    }
+    p {
+      width: 80%;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+
+  .company-btn {
+    margin-top: 2rem;
+    button {
+      background: linear-gradient(
+        270deg,
+        #903aff 0%,
+        #d434fe 56.42%,
+        #ff26b9 99.99%,
+        #fe34b9 100%
+      );
+      border-radius: 4px;
+      padding: 1rem 4.5rem;
+      text-decoration: none;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  h3 {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+
+    small {
+      font-size: 15px;
+    }
+  }
+}

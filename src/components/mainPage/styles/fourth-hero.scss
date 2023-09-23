@@ -1,0 +1,94 @@
+.four-hero {
+  height: 53rem;
+  width: -webkit-fill-available;
+  padding: 0rem 3rem 0 5rem;
+  background-image: url(../../../assets/FourthHeroBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .four-hero-second {
+    width: 50%;
+    .four-hero-body {
+      margin-top: 2rem;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27.5px;
+    }
+    .four-btn {
+      background: linear-gradient(
+        270deg,
+        #903aff 0%,
+        #d434fe 56.42%,
+        #ff26b9 99.99%,
+        #fe34b9 100%
+      );
+      border-radius: 4px;
+      padding: 1rem 4.5rem;
+      text-decoration: none;
+      color: #fff;
+      border: none;
+    }
+  }
+  .four-hero-first {
+    text-align: center;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .four-hero {
+    height: 63rem;
+    padding: 1rem 3rem 0 3rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .four-hero-first {
+      text-align: center;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .four-hero-second {
+      width: 80%;
+      height: 50%;
+      .four-hero-body {
+        margin-top: 1rem;
+        font-size: 13px;
+        width: auto;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .four-hero {
+    height: 76rem;
+    flex-direction: column;
+    .four-hero-first {
+      text-align: center;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .four-hero-second {
+      width: auto;
+      text-align: center;
+
+      .four-hero-body {
+        margin-top: 1rem;
+        font-size: 13px;
+      }
+    }
+  }
+}

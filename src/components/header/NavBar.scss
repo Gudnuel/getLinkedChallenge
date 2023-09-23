@@ -1,0 +1,154 @@
+.header {
+  background-color: transparent;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 1.3rem 0rem;
+  position: fixed;
+  padding: 1rem 5rem;
+  border-bottom: 0.1px outset;
+  width: -webkit-fill-available;
+  max-width: 100%;
+  z-index: 23;
+}
+
+.head {
+  width: 100%;
+}
+
+.sleep {
+  display: none;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.aside {
+  width: 25%;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.con {
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.control-active {
+  // margin-top: 2rem;
+  .presser {
+    background: linear-gradient(
+      270deg,
+      #903aff 0%,
+      #d434fe 56.42%,
+      #ff26b9 99.99%,
+      #fe34b9 100%
+    );
+    border-radius: 4px;
+    padding: 1rem 4.5rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  .active {
+    border-radius: 4px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #9a39ff, #ff29b9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
+.sandwich {
+  display: none;
+}
+
+.navi_link {
+  padding: 0rem 2rem;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid linear-gradient(#9a39ff, #ff29b9);
+}
+
+.navi_cover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .header {
+    padding: 1rem 3rem;
+    // position: relative;
+  }
+  .logo {
+    width: auto;
+  }
+
+  .aside {
+    width: 35%;
+  }
+
+  .navi_link {
+    padding: 0rem;
+    margin: 1rem 0rem;
+  }
+
+  .sandwich {
+    display: flex;
+  }
+
+  .sleep {
+    display: block;
+    width: 100%;
+    text-align: end;
+  }
+
+  .me-auto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    // position: relative;
+  }
+
+  .navi_cover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    border: 0.5px solid rgba(255, 255, 255, 0.04);
+    background: #150e28;
+    padding: 2.5rem;
+    position: absolute;
+    top: 2px;
+    right: 200rem;
+    height: 24rem;
+    width: 80%;
+  }
+  .control-active {
+    margin-top: 2rem;
+    .presser {
+      margin-top: 1rem;
+    }
+  }
+}
