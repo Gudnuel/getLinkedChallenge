@@ -5,6 +5,7 @@ import FourHero from "./FourHero";
 import FiveHero from "./FiveHero";
 import PartnerSponsor from "./PartnerSponsor";
 import PrizeAward from "./PrizeAward";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 export {
   PrizeAward,
@@ -14,4 +15,5 @@ export {
   FourHero,
   FiveHero,
   PartnerSponsor,
+  PrivacyPolicy,
 };

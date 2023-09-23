@@ -10,7 +10,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  //   flex-wrap: wrap;
 }
 .prize-first-part {
   display: flex;
@@ -19,6 +19,22 @@
   align-items: center;
   height: 60%;
   width: 35%;
+  .prize-first-one {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 40%;
+    .prize-word {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 170.9%; /* 27.344px */
+    }
+  }
   img {
     width: 100%;
     height: auto;
@@ -41,7 +57,7 @@
     .prize-word {
       color: #fff;
       font-family: Montserrat;
-      font-size: 16px;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 400;
       line-height: 170.9%; /* 27.344px */
@@ -64,8 +80,39 @@
 
 @media (max-width: 960px) {
   .prize-main {
-    height: 43rem;
+    height: 64rem;
     padding: 0rem 3rem 0 3rem;
     flex-direction: column;
+    .prize-first-part {
+      height: 60%;
+      width: 72%;
+      flex-direction: column;
+      .prize-first-one {
+        display: flex;
+        align-items: center;
+        width: 99%;
+        text-align: center;
+        .prize-word {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .prize-second-part {
+      width: 90%;
+      height: 47%;
+      .prize-second-one {
+        display: none;
+      }
+      .prize-second-two {
+        height: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .prize-main {
+    height: 39rem;
+    padding-top: 5rem;
   }
 }

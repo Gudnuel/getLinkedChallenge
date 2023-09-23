@@ -8,6 +8,12 @@ const PrizeAward = () => {
   return (
     <div className="prize-main">
       <section className="prize-first-part">
+        <div className="prize-first-one">
+          <TopicComponent firstTopic="Prizes and" secondTopic="Rewards" />
+          <p className="prize-word">
+            Highlight of the prizes or rewards for winners and for participants.
+          </p>
+        </div>
         <img src={prize} alt="prize pic" />
       </section>
       <section className="prize-second-part">

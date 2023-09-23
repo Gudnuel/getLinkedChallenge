@@ -5,6 +5,7 @@ import {
   FourHero,
   HeroPart,
   PartnerSponsor,
+  PrivacyPolicy,
   PrizeAward,
   SecondHero,
   ThirdHero,
@@ -20,6 +21,7 @@ const MainPage = () => {
       <FiveHero />
       <PrizeAward />
       <PartnerSponsor />
+      <PrivacyPolicy />
     </>
   );
 };
