@@ -3,7 +3,7 @@ import axios from "axios";
 import "./beautifier/register-page.scss";
 import registerGuySeat from "../assets/registerGuySeatImg.svg";
 import movementImg from "../assets/movementImg.svg";
-import { baseUrl } from "../confij";
+import { baseUrl } from "../Confij";
 import { DownwardArrowIcon } from "../components/icon/index.jsx";
 import { option } from "../Data/option";
 import { SuccessModal } from "../components/register/index";
@@ -19,10 +19,12 @@ const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Select your category");
+  const [modal, setModal] = useState(false);
+  const [error, setError] = useState(false);
 
-  // const handleCategory = (e) => {
-  //   setCategory(e.target.value);
-  // };
+  const handleModal = (e) => {
+    setCategory(e.target.value);
+  };
   const handleGroupSize = (e) => {
     setGroupSize(e.target.value);
   };
@@ -41,7 +43,15 @@ const RegisterPage = () => {
       setCategory(3);
     }
   };
-
+  const reset = () => {
+    setCategory("");
+    setEmail("");
+    setGroupSize("");
+    setPhone("");
+    setProjectTopic("");
+    setPrivacy("");
+    setTeamName("");
+  };
   // if (selected === "MOBILE") {
   //   setCategory(1);
   // }
@@ -55,23 +65,32 @@ const RegisterPage = () => {
     e.preventDefault();
     setIsLoading(true);
     const data = {
-      teamName,
-      projectTopic,
-      email,
-      phone,
-      category,
-      groupSize,
-      privacy,
+      email: email,
+      team_name: teamName,
+      phone_number: phone,
+      project_topic: projectTopic,
+      group_size: groupSize,
+      privacy_policy_accepted: privacy,
+      category: category,
     };
     console.log(data);
     const response = await axios.post(
-      // `${baseUrl}/hackathon/categories-list`,
+      `${baseUrl}/hackathon/registration`,
       data
     );
     const report = response.data;
     if (report) {
       console.log(report);
       setIsLoading(false);
+      setModal(true);
+      // console.log(report);
+      reset();
+    } else {
+      setIsLoading(false);
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
     }
   };
 
@@ -113,6 +132,7 @@ const RegisterPage = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
+                  pattern="[0-9]{11}"
                   placeholder="Enter your phone number"
                 />
               </span>
@@ -185,7 +205,12 @@ const RegisterPage = () => {
               </span>
             </section>
             <span className="bottom-register-option">
-              <p>Please review your registration details before submitting</p>
+              {!error && (
+                <p>Please review your registration details before submitting</p>
+              )}
+              {error && (
+                <p>Please review your registration details before submitting</p>
+              )}
 
               <p className="check-privacy">
                 <input
@@ -208,7 +233,7 @@ const RegisterPage = () => {
           </form>
         </div>
       </section>
-      <SuccessModal modal={true} />
+      <SuccessModal modal={modal} setModal={handleModal} />
     </div>
   );
 };
