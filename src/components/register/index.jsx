@@ -1,4 +1,4 @@
 import InputComponent from "./InputComponent";
-import { SuccessModal } from "./successModal";
+import RegisterSuccessModal from "./RegisterSuccessModal";
 
-export { InputComponent, SuccessModal };
+export { InputComponent, RegisterSuccessModal };

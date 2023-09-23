@@ -6,7 +6,7 @@ import movementImg from "../assets/movementImg.svg";
 import { baseUrl } from "../Data/baseUrl";
 import { DownwardArrowIcon } from "../components/icon/index.jsx";
 import { option } from "../Data/option";
-import { SuccessModal } from "../components/register/index";
+import { RegisterSuccessModal } from "../components/register/index";
 
 const RegisterPage = () => {
   const [teamName, setTeamName] = useState("");
@@ -224,7 +224,7 @@ const RegisterPage = () => {
           </form>
         </div>
       </section>
-      <SuccessModal modal={modal} setModal={handleModal} />
+      <RegisterSuccessModal modal={modal} setModal={handleModal} />
     </div>
   );
 };
