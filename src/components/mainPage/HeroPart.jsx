@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/hero-part.scss";
 import creative from "../../assets/Creative-icon.svg";
 import chain from "../../assets/chain-icon.svg";
-import dynamite from "../../assets/Dynamite-icon.svg";
+import dynamite from "../../assets/dynamite-icon.svg";
 import { BottomBar } from "../icon/index";
 
 const HeroPart = () => {
