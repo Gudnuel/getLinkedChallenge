@@ -1,6 +1,6 @@
 // export default { heroFiveData, heroFiveData };
 
-const heroFourData = [
+export const heroFourData = [
   {
     id: 1,
     head: "Innovation and Creativity",
@@ -28,4 +28,13 @@ const heroFourData = [
   },
 ];
 
-export default heroFourData;
+export const privacyData = [
+  {
+    id: 1,
+    body: "The Standard License grants you a non-exclusive right to navigate and register for our event.",
+  },
+  {
+    id: 2,
+    body: "You are licensed to use the item available at any free source sites, for your project developement",
+  },
+];

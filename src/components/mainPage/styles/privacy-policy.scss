@@ -3,7 +3,7 @@
   width: 100%;
   width: -webkit-fill-available;
   padding: 0rem 3rem 0 5rem;
-  background-image: url(../../../assets/PriacyPolicyImg.svg);
+  background-image: url(../../../assets/PrivacyPolicyBg.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -14,11 +14,92 @@
 }
 .privacy-first-part {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: 60%;
-  width: 35%;
+  height: 80%;
+  width: 48%;
+  .privacy-first-part-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 25%;
+    p {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 188.4%;
+      width: 78%;
+    }
+    .para-time {
+      opacity: 75%;
+    }
+  }
+  .privacy-first-part-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 72%;
+    .privacy-first-part-two-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 95%;
+      border-radius: 5px;
+      border: 1px solid #d434fe;
+      background: rgba(217, 217, 217, 0.03);
+      .privacy-case-holder {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+      }
+      .privacy-word {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 216.4%;
+      }
+      .privacy-head-word {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140.4%;
+        margin: 0.6rem 0rem;
+        span {
+          color: #d434fe;
+          font-size: 16px;
+        }
+      }
+      .privacy-presser {
+        background: linear-gradient(
+          270deg,
+          #903aff 0%,
+          #d434fe 56.42%,
+          #ff26b9 99.99%,
+          #fe34b9 100%
+        );
+        border-radius: 4px;
+        // padding: 1rem 4.5rem;
+        text-decoration: none;
+        color: #fff;
+        width: 172px;
+        height: 53px;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
 }
 .privacy-second-part {
   display: flex;
@@ -26,5 +107,55 @@
   justify-content: space-evenly;
   align-items: center;
   height: 90%;
-  width: 60%;
+  width: 45%;
+  img {
+    width: 85%;
+  }
+}
+
+@media (max-width: 765px) {
+  .privacy-main {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 3rem 0 3rem;
+    // align-items: center;
+    // justify-content: space-evenly;
+    //   flex-wrap: wrap;
+    .privacy-first-part {
+      height: 53rem;
+      width: auto;
+      .privacy-first-part-one {
+        align-items: center;
+        text-align: center;
+        height: 25%;
+        p {
+          width: 100%;
+        }
+      }
+      .privacy-first-part-two {
+        align-items: center;
+        height: 100%;
+        margin-top: 2rem;
+        .privacy-first-part-two-holder {
+          width: 100%;
+          .privacy-case-holder {
+            width: 90%;
+          }
+          .privacy-head-word {
+            margin: 1rem 0rem;
+          }
+          .privacy-word {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .privacy-second-part {
+      height: 39rem;
+      width: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

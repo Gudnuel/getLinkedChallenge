@@ -2,17 +2,14 @@ import React from "react";
 import "./styles/privacy-lister.scss";
 import { GreenCeal } from "../icon";
 
-const PrivacyLister = () => {
+const PrivacyLister = (props) => {
+  const { body } = props;
   return (
     <div className="privacy-lister">
       <span className="indicator">
         <GreenCeal />
       </span>
-
-      <p className="privacy-lister">
-        The Standard License grants you a non-exclusive right to navigate and
-        register for our event
-      </p>
+      <p className="privacy-lister-word">{body}</p>
     </div>
   );
 };

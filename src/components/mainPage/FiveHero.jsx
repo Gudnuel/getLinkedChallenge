@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/fifth-hero.scss";
 import { HeroFiveLister, TopicComponent } from "../general/index";
-import fiveHeroImage from "../../assets/fiveHeroImage.svg";
+import fiveHeroImage from "../../assets/fiveHeroImage.png";
 import fiveData from "../../Data/fiveDate";
 
 const FiveHero = () => {

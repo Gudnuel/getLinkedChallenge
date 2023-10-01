@@ -1,5 +1,5 @@
 import React from "react";
-import theBigDeal from "../../assets/theBigDeal.svg";
+import theBigDeal from "../../assets/theBigDeal.png";
 import starFix from "../../assets/starFix.svg";
 
 import "./styles/second-hero.scss";

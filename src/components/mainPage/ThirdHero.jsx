@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/third-hero.scss";
-import thridHeroImage from "../../assets/thirdHeroDeskImg.svg";
+import thridHeroImage from "../../assets/thirdHeroDeskImg.png";
 import { TopicComponent } from "../general/index.jsx";
 
 const ThirdHero = () => {

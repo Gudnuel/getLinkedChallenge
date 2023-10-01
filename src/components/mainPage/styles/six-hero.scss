@@ -1,0 +1,71 @@
+.six-hero {
+  height: 85rem;
+  //   width: 100%;
+  width: -webkit-fill-available;
+  padding: 0rem 3rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  //   flex-wrap: wrap;
+  .six-first-part {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 8rem;
+    width: 30%;
+    align-items: center;
+    h2 {
+      color: #fff;
+      font-family: Clash Display;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 0%;
+    }
+    p {
+      color: #fff;
+      opacity: 0.75;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120.4%; /* 24.136px */
+    }
+  }
+  .six-second-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .desk-no {
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-no {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .six-hero {
+    padding: 0rem 3rem 0 3rem;
+  }
+  .six-second-part {
+    align-items: center;
+    text-align: center;
+    .desk-no {
+      display: none !important;
+    }
+    .mobile-no {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

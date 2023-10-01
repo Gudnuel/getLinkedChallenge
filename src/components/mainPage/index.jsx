@@ -6,8 +6,10 @@ import FiveHero from "./FiveHero";
 import PartnerSponsor from "./PartnerSponsor";
 import PrizeAward from "./PrizeAward";
 import PrivacyPolicy from "./PrivacyPolicy";
+import SixHero from "./SixHero";
 
 export {
+  SixHero,
   PrizeAward,
   HeroPart,
   SecondHero,

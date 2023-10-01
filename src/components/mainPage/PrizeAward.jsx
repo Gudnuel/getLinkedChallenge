@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/prize-award.scss";
-import reward from "../../assets/RewardsMedalImg.svg";
-import prize from "../../assets/prizeImg.svg";
+import reward from "../../assets/RewardsMedalImg.png";
+import prize from "../../assets/prizeImg.png";
 import { TopicComponent } from "../general/index";
 
 const PrizeAward = () => {

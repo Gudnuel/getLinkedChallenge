@@ -1,10 +1,11 @@
 import React from "react";
-import fourthHeroImage from "../../assets/fourthHeroDeskImg.svg";
+import fourthHeroImage from "../../assets/fourthHeroDeskImg.png";
 import "./styles/fourth-hero.scss";
 import { TopicComponent, HeroFourLister } from "../general/index.jsx";
-import heroFourData from "../../Data/data";
+import { heroFourData } from "../../Data/data";
 
 const FourHero = () => {
+  // const {her}
   return (
     <div className="four-hero">
       <section className="four-hero-first">

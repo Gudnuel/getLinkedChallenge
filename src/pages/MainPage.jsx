@@ -8,21 +8,23 @@ import {
   PrivacyPolicy,
   PrizeAward,
   SecondHero,
+  SixHero,
   ThirdHero,
 } from "../components/mainPage/index.jsx";
 
 const MainPage = () => {
   return (
-    <>
+    <div className="main-pages-bg">
       <HeroPart />
       <SecondHero />
       <ThirdHero />
       <FourHero />
       <FiveHero />
+      <SixHero />
       <PrizeAward />
       <PartnerSponsor />
       <PrivacyPolicy />
-    </>
+    </div>
   );
 };
 
